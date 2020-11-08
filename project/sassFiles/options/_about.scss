@@ -1,0 +1,201 @@
+.aboutSection{
+    padding: 40px 0;
+    .aboutImg{
+        flex: 0 0 40%;
+        max-width: 40%;
+        padding: 10px;
+        border-radius: 15px;
+        img{
+            max-width: 100%;
+            border: 10px solid transparent;
+            border-radius: 15px;
+        }
+    }
+    .aboutInfo{
+        flex: 0 0 56%;
+        max-width: 56%;
+        p{
+            color: var(--text-black-700);
+            line-height: 1.8em;
+            font-size: 16px;
+            span{
+                font-weight: 700;
+                text-transform: capitalize;
+                padding-right: 5px;
+            }
+        }
+        p:last-of-type{
+            margin-top: 15px;
+        }
+    }
+    .socialMedia{
+        flex: 0 0 40%;
+        max-width: 40%;
+        margin-top: 20px;
+        text-align: center;
+        a{
+            width: 45px;
+            height: 45px;
+            color: var(--text-black-600);
+            border-radius: 30px;
+            text-align: center;
+            line-height: 45px;
+            margin: 5px;
+            font-size: 16px;
+            @extend %timeTransition;
+            &:hover{color:var(--skin-color)}
+        }
+    }
+    .aboutTabs{
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: center;
+        margin: 20px auto;
+        .tabLabel{
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 30px;
+            font-size: 16px;
+            text-transform: capitalize;
+            margin: 5px;
+            cursor: pointer;
+            @extend %timeTransition;
+            &:hover:not(.active){
+            opacity: .6;
+            }
+            &.active{
+                color: var(--skin-color);
+            }
+        }
+    }
+    .skillContent{
+        .skillBox{
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0 15px;
+            margin-bottom: 15px;
+                p{
+                    text-transform: capitalize;
+                    padding-bottom: 10px;
+                    color: var(--text-black-900);
+                }
+                .skillBar{
+                height: 20px;
+                border-radius: 10px;
+                position: relative;
+                .skillProgress{
+                    background-color: var(--text-black-600);
+                    height: 6px;
+                    position: absolute;
+                    top: 7px;
+                    left: 7px;
+                    border-radius: 10px;
+                    span{
+                        position: absolute;
+                        right: 0;
+                        top: -33px;
+                        color: var(--text-black-900);
+                    }
+                }
+            }
+        }
+    }
+    .timeLine{
+        margin: 40px 0;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            background-color: var(--bg-black-100);
+            width: 1px;
+            height: 100%;
+            top: 0;
+            left: 50%;
+        }
+        .timeLineBox{
+            flex: 0 0 100%;
+            max-width: 100%;
+            position: relative;
+            margin-bottom: 15px;
+            &:nth-child(odd){
+                padding-right: calc(50% + 50px);
+                text-align: right;
+            }
+            &:nth-child(even){
+                padding-left: calc(50% + 50px);
+                text-align: left;
+            }
+            .timeLineContent{
+                flex: 0 0 100%;
+                max-width: 100%;
+                padding: 30px;
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    height: 1px;
+                    width: 26px;
+                    top: 50px;
+                    background-color: var(--bg-black-100);
+                }
+                .icon{
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    font-size: 16px;
+                    text-align: center;
+                    line-height: 40px;
+                    border-radius: 50%;
+                    color: var(--skin-color);
+                    border: 1px solid var(--bg-black-100);
+                    background-color: var(--bg-black-50);
+                }
+                span{
+                    color: var(--skin-color);
+                    font-size: 16px;
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    padding-bottom: 15px;
+                    display: block;
+                }
+                h3{
+                    text-transform: capitalize;
+                    font-size: 25px;
+                    color: var(--text-black-600);
+                    margin-bottom: 15px;
+                }
+                h4{
+                    text-transform: capitalize;
+                    margin-bottom: 15px;
+                    font-weight: 400;
+                    font-style: italic;
+                    font-size: 16px;
+                    color: var(--text-black-600);
+                }
+                p{
+                    line-height: 1.8em;
+                    color: var(--text-black-600);
+                    font-size: 16px;
+                }
+            }
+            &:nth-child(odd) .timeLineContent{
+                &::before{
+                    right: -30px ;
+                }
+            }
+            &:nth-child(even) .timeLineContent{
+                &::before{
+                    left: -30px;
+                }
+            }
+            &:nth-child(odd) .icon{
+                right: -70px;
+            }
+            &:nth-child(even) .icon{
+                left: -70px;
+            }
+
+        }
+    }
+}
+
