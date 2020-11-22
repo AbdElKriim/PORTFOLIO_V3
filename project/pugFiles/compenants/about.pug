@@ -1,7 +1,6 @@
 section.aboutSection
     .container
-        .row
-            .sectionTitle
+        .row.sectionTitle
                 h2(data-heading="main info") about me
         .row.spaceBetween   
             .aboutImg.innerShadow
@@ -25,7 +24,7 @@ section.aboutSection
                 .tabLabel.active.outerShadow(data-skill = ".skills") skills
                 .tabLabel(data-skill = ".experiences") experiences
                 .tabLabel(data-skill = ".education") education
-        .row.skillContent
+        .row.skillContent.skills.aboutContent.active
             .skillBox
                 p javaScript , jquery
                 .skillBar.innerShadow
@@ -56,7 +55,8 @@ section.aboutSection
                 .skillBar.innerShadow
                     .skillProgress(style = "width:calc(85% - 14px)")
                         span 85%
-        .row.timeLine
+                        
+        .row.timeLine.experiences.aboutContent
             .timeLineBox
                 .timeLineContent.outerShadow
                     i.fas.fa-briefcase.icon
@@ -67,31 +67,46 @@ section.aboutSection
             .timeLineBox
                 .timeLineContent.outerShadow
                     i.fas.fa-briefcase.icon
-                    span sep, 2018 - present
+                    span august , 2017 - may , 2018
                     h3 full stack developer
                     h4 company name, morocco
                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sit, fugiat quae dicta minima.
             .timeLineBox
                 .timeLineContent.outerShadow
                     i.fas.fa-briefcase.icon
-                    span sep, 2018 - present
-                    h3 full stack developer
+                    span april, 2015 - june , 2017
+                    h3 web developper
                     h4 company name, morocco
                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sit, fugiat quae dicta minima.
                                         
             .timeLineBox
                 .timeLineContent.outerShadow
                     i.fas.fa-briefcase.icon
-                    span sep, 2018 - present
-                    h3 full stack developer
+                    span april, 2013 - march, 2015
+                    h3 web designer
                     h4 company name, morocco
                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sit, fugiat quae dicta minima.
                     
+
+        .row.timeLine.education.aboutContent
             .timeLineBox
                 .timeLineContent.outerShadow
-                    i.fas.fa-briefcase.icon
-                    span sep, 2018 - present
+                    i.fas.fa-graduation-cap.icon
+                    span october , 2010 - sep, 2012
+                    h3 master in computer sciences
+                    h4 company name, morocco
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sit, fugiat quae dicta minima.
+            .timeLineBox
+                .timeLineContent.outerShadow
+                    i.fas.fa-graduation-cap.icon
+                    span august , 2008 - may , 2010
                     h3 full stack developer
                     h4 company name, morocco
                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sit, fugiat quae dicta minima.
-                    
+            .timeLineBox
+                .timeLineContent.outerShadow
+                    i.fas.fa-graduation-cap.icon
+                    span april, 2006 - june , 2007
+                    h3 web developper
+                    h4 company name, morocco
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sit, fugiat quae dicta minima.

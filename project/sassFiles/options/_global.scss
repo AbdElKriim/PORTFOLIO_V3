@@ -10,6 +10,7 @@
     --outer-shadow  : 3px 3px 3px #d0d0d0 , -3px -3px 3px #f8f8f8;
     --outer-shadow-0  : 0 0 0 #d0d0d0 , 0 0 0 #f8f8f8;
     --inner-shadow  : inset 3px 3px 3px #d0d0d0 , inset -3px -3px 3px #f8f8f8;
+    --inner-shadow-0 : inset 0 0 0 #d0d0d0 , inset 0 0 0 #f8f8f8;
 }
 *{
     padding: 0;
@@ -23,10 +24,14 @@ body{
     // font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     background-color: var(--bg-black-50);
+    &.scrollY{
+        overflow-y: hidden;
+    }
 }
 %timeTransition{
     transition: all .4s ease-in-out;
 }
+.displayNone{display: none;}
 a{
     text-decoration: none;
 }
